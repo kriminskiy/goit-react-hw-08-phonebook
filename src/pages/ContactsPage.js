@@ -12,7 +12,9 @@ import s from './ContactsPage.module.css';
 export default function ContactsPage() {
   const dispatch = useDispatch();
 
-  useEffect(() => dispatch(contactsOperations.fetchContacts()), [dispatch]);
+  useEffect(() => {
+    dispatch(contactsOperations.fetchContacts());
+  }, [dispatch]);
 
   return (
     <main>
